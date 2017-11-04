@@ -1,0 +1,81 @@
+﻿@model IEnumerable<Wardrobe_MVC.Models.Shoe>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Photo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Type)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Color)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IsSummer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IsFall)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IsWinter)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IsSpring)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Occasion)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Photo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Type)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Color)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IsSummer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IsFall)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IsWinter)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IsSpring)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Occasion)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ShoesID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ShoesID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ShoesID })
+        </td>
+    </tr>
+}
+
+</table>
