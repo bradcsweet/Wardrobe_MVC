@@ -1,9 +1,10 @@
 ﻿body {
-    padding-top: 50px;
+    padding-top: 60px;
     padding-bottom: 20px;
-    font-family: 'Josefin Slab', serif;
-    color: rgba(70, 83, 98, 1);
-    background-color: #91CB3E;
+    font-family: 'Josefin Sans', sans-serif;
+    color: #081C04;
+    background-color: #4C934C;
+    text-align: center;
 }
 /*COLOR PALLETTE*/
 /*
@@ -14,8 +15,16 @@
     CORAL: rgba(205, 83, 59, 1);
 */
 
-.thumbnail {
-                        
+h2 {
+    font-family: 'fredericka the great', cursive;
+    font-weight: 600;
+}
+
+
+.thumbnail a {
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: bold;
+    color: #081C04;
 }
 
 
@@ -27,7 +36,6 @@
     padding: 5px 15px 15px 15px;
     color: white;
     height: 60px;
-    border:;
 }
 
 /* Set padding to keep content from hitting the edges 

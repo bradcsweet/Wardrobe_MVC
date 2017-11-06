@@ -3,13 +3,14 @@
 @{
     ViewBag.Title = "Index";
 }
-
-<h2>Index</h2>
-
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-
+<div class="row">
+    <div class="container">
+        <h2>Current Tops Inventory</h2>
+        <p>
+            @Html.ActionLink("ADD TOP", "Create", new { id = ViewBag.TopsID }, new { @class = "btn btn-default", role = "button" })
+        </p>
+    </div>
+</div>
 <div class="row">
     @foreach (var item in Model)
     {
@@ -17,93 +18,11 @@
             <div class="thumbnail">
                 <a>
                     <img src="@Html.DisplayFor(modelItem => item.Photo)" />
-                    <div class="caption">
-                        <h3>@Html.DisplayFor(modelItem => item.Name)</h3>
-                        <p>@Html.DisplayFor(modelItem => item.Type)</p>
-                        <p>@Html.ActionLink("Details", "Details", new { id = item.TopsID }, new { @class = "btn btn-default", role = "button" })</p>
-                    </div>
+                    <h3>@Html.DisplayFor(modelItem => item.Name)</h3>
+                    <p>@Html.DisplayFor(modelItem => item.Type)</p>
+                    <p>@Html.ActionLink("DETAILS", "Details", new { id = item.TopsID }, new { @class = "btn btn-default", role = "button" })</p>
                 </a>
             </div>
-            <div class="container-fluid">
-                <span>@Html.ActionLink("Edit", "Edit", new { id = item.TopsID }, new { @class = "btn btn-default", role = "button" })
-                @Html.ActionLink("Details", "Details", new { id = item.TopsID }, new { @class = "btn btn-default", role = "button" })
-                @Html.ActionLink("Delete", "Delete", new { id = item.TopsID }, new { @class = "btn btn-default", role = "button" })
-                </span>
-            </div>
         </div>
-
     }
 </div>
-
-@*<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Name)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Photo)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Type)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Color)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.IsSummer)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.IsFall)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.IsWinter)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.IsSpring)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Occasion)
-        </th>
-        <th></th>
-    </tr>*@
-
-@*@foreach (var item in Model)
-        {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Name)
-                </td>
-                <td>
-                    <img src="@Html.DisplayFor(modelItem => item.Photo)" />
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Type)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Color)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.IsSummer)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.IsFall)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.IsWinter)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.IsSpring)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Occasion)
-                </td>
-                <td>
-
-                    @Html.ActionLink("Edit", "Edit", new { id = item.TopsID }) |
-                    @Html.ActionLink("Details", "Details", new { id = item.TopsID }) |
-                    @Html.ActionLink("Delete", "Delete", new { id = item.TopsID })
-                </td>
-            </tr>
-        }
-    </table>*@
-

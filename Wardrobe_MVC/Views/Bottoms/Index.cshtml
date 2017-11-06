@@ -4,12 +4,47 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<div class="row">
+    <div class="container">
+        <h2>Current Bottom Inventory</h2>
+        <p>
+            @Html.ActionLink("ADD BOTTOM", "Create", new { id = ViewBag.BottomsID }, new { @class = "btn btn-default", role = "button" })
+        </p>
+    </div>
+</div>
+<div class="row">
+    @foreach (var item in Model)
+    {
+        <div class="col-sm-6 col-md-4">
+            <div class="thumbnail">
+                <a>
+                    <img src="@Html.DisplayFor(modelItem => item.Photo)" />
+                    <h3>@Html.DisplayFor(modelItem => item.Name)</h3>
+                    <p>@Html.DisplayFor(modelItem => item.Occasion)</p>
+                    <p>@Html.ActionLink("DETAILS", "Details", new { id = item.BottomsID }, new { @class = "btn btn-default", role = "button" })</p>
+                </a>
+            </div>
+        </div>
+    }
+</div>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@*<table class="table">
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.Name)
@@ -78,4 +113,4 @@
     </tr>
 }
 
-</table>
+</table>*@
