@@ -21,6 +21,7 @@
                 <h3>@Html.DisplayFor(modelItem => item.Name)</h3>
                 <p>@Html.DisplayFor(modelItem => item.Date)</p>
                 <p>@Html.ActionLink("DETAILS", "Details", new { id = item.OutfitID }, new { @class = "btn btn-default", role = "button" })</p>
+                <p>@Html.ActionLink("DELETE", "Delete", new { id = item.OutfitID }, new { @class = "btn btn-default", role = "button" })</p>
             </div>
         </div>
         <div class="col-sm-4 col-md-2">
