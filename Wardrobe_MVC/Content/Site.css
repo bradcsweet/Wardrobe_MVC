@@ -2,6 +2,8 @@
     padding-top: 50px;
     padding-bottom: 20px;
     font-family: 'Josefin Slab', serif;
+    color: rgba(70, 83, 98, 1);
+    background-color: #91CB3E;
 }
 /*COLOR PALLETTE*/
 /*
@@ -12,19 +14,23 @@
     CORAL: rgba(205, 83, 59, 1);
 */
 
-
+.thumbnail {
+                        
+}
 
 
 /*NAVBAR STYLE*/
-.navbar.navbar-default{
-    font-family: 'Fredericka the Great', cursive;
+.navbar-inverse {
+    font-family: 'fredericka the great', cursive;
     font-size: 20px;
-    background-color: rgba(249, 220, 92, .93);
-    padding-left: 15px;
-    padding-right:15px;
+    background-color: #081C04;
+    padding: 5px 15px 15px 15px;
+    color: white;
+    height: 60px;
+    border:;
 }
 
-/* Set padding to keep content from hitting the edges */
+/* Set padding to keep content from hitting the edges 
 .body-content {
     padding-left: 15px;
     padding-right: 15px;
