@@ -1,6 +1,27 @@
 ﻿body {
     padding-top: 50px;
     padding-bottom: 20px;
+    font-family: 'Josefin Slab', serif;
+}
+/*COLOR PALLETTE*/
+/*
+    STIL DE GRAIN YELLOW: rgba(249, 220, 92, 1);
+    TEA GREEN: rgba(194, 234, 189, 1);
+    MAASTRICHT BLUE: rgba(1, 25, 54, 1);
+    INDEPENDENCE: rgba(70, 83, 98, 1);
+    CORAL: rgba(205, 83, 59, 1);
+*/
+
+
+
+
+/*NAVBAR STYLE*/
+.navbar.navbar-default{
+    font-family: 'Fredericka the Great', cursive;
+    font-size: 20px;
+    background-color: rgba(249, 220, 92, .93);
+    padding-left: 15px;
+    padding-right:15px;
 }
 
 /* Set padding to keep content from hitting the edges */
